@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         botonigual = findViewById(R.id.botonigual);
         botonC = findViewById(R.id.botonC);
         botonreturn = findViewById(R.id.botonreturn);
-        //Button button = findViewById(R.id.button);
         textView = findViewById(R.id.textView5);
 
         boton1.setOnClickListener(this);
@@ -71,72 +70,120 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     textView.setText(aux2);
                     aux2+="1";
                     aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
                 }
             }
             if (b.getId() == boton2.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "2";
-                else
-                    aux2 += "2";
+                } else {
+                    textView.setText(aux2);
+                    aux2+="2";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == boton3.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "3";
-                else
-                    aux2 += "3";
+                } else {
+                    textView.setText(aux2);
+                    aux2+="3";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == boton4.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "4";
-                else
-                    aux2 += "4";
-                ;
+                } else {
+                    textView.setText(aux2);
+                    aux2+="4";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == boton5.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "5";
-                else
-                    aux2 += "5";
+                } else {
+                    textView.setText(aux2);
+                    aux2+="5";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == boton6.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "6";
-                else
-                    aux2 += "6";
+                } else {
+                    textView.setText(aux2);
+                    aux2+="6";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == boton7.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "7";
-                else
-                    aux2 += "7";
+                } else {
+                    textView.setText(aux2);
+                    aux2+="7";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == boton8.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "8";
-                else
-                    aux2 += "8";
+                } else {
+                    textView.setText(aux2);
+                    aux2+="8";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == boton9.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "9";
-                else
-                    aux2 += "9";
+                } else {
+                    textView.setText(aux2);
+                    aux2+="9";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == boton0.getId()) {
-                if (!pass)
+                if (!pass) {
                     aux += "0";
-                else
-                    aux2 += "0";
+                } else {
+                    textView.setText(aux2);
+                    aux2+="0";
+                    aux=operacionIgual(aux,aux2);
+                    aux2="";
+                    pass=false;
+                }
             }
             if (b.getId() == botonmas.getId()) {
                 if (!pass) {
-                    textView.setText(aux2);
+                    // aux+="1";
+                    textView.setText("0");
                     sum = true;
                     pass = true;
                 } else if (pass) {
-                    operacionIgual(aux,aux2);
-                    aux = "";
-                    aux2 = "";
+                    textView.setText("0");
+//                    aux = operacionIgual(aux,aux2);
+//                    aux2 = "";
+                    pass=false;
                 }
             }
             if (b.getId() == botonigual.getId()) {
@@ -155,8 +202,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textView.setText(aux);
             } else{
                 textView.setText(aux2);
+                aux2="";
             }
         }
+        System.out.println("prim"+aux);
+        System.out.println("seg"+aux2);
     }
     private String operacionReturn(String aux) {
         String newaux="";
@@ -168,17 +218,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String operacionIgual(String aux,String aux2) {
         char suma = '+';
-        int num;
         int primPart;
         int segPart;
         String presuma = "";
         String postsuma = "";
-
-        System.out.println(postsuma);
-        System.out.println(presuma);
-        primPart= Integer.parseInt(aux);
-        segPart = Integer.parseInt(aux2);
-
+        System.out.println(aux);
+        System.out.println(aux2);
+        System.out.println("operacion"+ operacionReturn(aux));
+        //presuma =operacionReturn(aux);
+        presuma = aux;
+        postsuma+=aux2;
+        primPart= Integer.parseInt(presuma);
+        segPart = Integer.parseInt(postsuma);
+        System.out.println(primPart+" prim");
+        System.out.println(segPart+" seg");
+        System.out.println(primPart+segPart+"");
         return primPart+segPart+"";
     }
 }
