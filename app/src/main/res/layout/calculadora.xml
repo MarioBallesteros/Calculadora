@@ -14,7 +14,7 @@
         tools:ignore="MissingConstraints">
 
         <TableLayout
-            android:layout_width="290dp"
+            android:layout_width="match_parent"
             android:layout_height="390dp">
 
             <TableRow
@@ -26,6 +26,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:text="1" />
 
                 <Button
@@ -33,6 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:text="2" />
 
                 <Button
@@ -40,12 +42,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:text="3" />
+
+                <Button
+                    android:id="@+id/botondiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="/" />
 
             </TableRow>
 
             <TableRow
-                android:layout_width="match_parent"
+                android:layout_width="408dp"
                 android:layout_height="match_parent">
 
                 <Button
@@ -53,6 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:text="4" />
 
                 <Button
@@ -60,6 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:text="5" />
 
                 <Button
@@ -67,7 +80,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
-                    android:text="6" />
+                    android:text="6"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/botonmult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="*" />
 
             </TableRow>
 
@@ -80,6 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:text="7" />
 
                 <Button
@@ -87,6 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:text="8" />
 
                 <Button
@@ -94,7 +118,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:text="9" />
+
+                <Button
+                    android:id="@+id/botonmas2"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textSize="20sp" />
 
             </TableRow>
 
@@ -103,12 +137,12 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/botonpunto"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="." />
 
                 <Button
                     android:id="@+id/boton0"
@@ -119,10 +153,21 @@
                     android:text="0" />
 
                 <Button
-                    android:id="@+id/button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:id="@+id/botonigual"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="=" />
+
+                <Button
+                    android:id="@+id/botonmas"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="+" />
+
             </TableRow>
 
         </TableLayout>
@@ -144,33 +189,13 @@
 
     <Button
         android:id="@+id/botonreturn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="112dp"
+        android:layout_height="78dp"
         android:layout_margin="8dp"
         android:layout_weight="1"
         android:text="borrar"
-        tools:layout_editor_absoluteX="267dp"
+        tools:layout_editor_absoluteX="291dp"
         tools:layout_editor_absoluteY="212dp" />
-
-    <Button
-        android:id="@+id/botonmas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_weight="1"
-        android:text="+"
-        tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="183dp" />
-
-    <Button
-        android:id="@+id/botonigual"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_weight="1"
-        android:text="="
-        tools:layout_editor_absoluteX="235dp"
-        tools:layout_editor_absoluteY="184dp" />
 
     <Button
         android:id="@+id/botonC"
